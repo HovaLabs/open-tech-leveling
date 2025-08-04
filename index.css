@@ -1,0 +1,698 @@
+/* ==========================================================================
+   CSS Variables & Base Styles
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --onBackground: #000;
+  --background: #fff;
+  --github-button-color: #94d2bd;
+  --onGithubButton: #000;
+
+  /* Table Colors */
+  --tableBody: #eff8f5;
+  --tableHeader: #0d7478;
+  --onTableHeader: #0d7478;
+  --tableBorder: rgba(148, 210, 189, 0.2);
+  --tableHover: rgba(148, 210, 189, 0.1);
+  --tableRowEven: rgba(148, 210, 189, 0.05);
+
+  /* Rainbow Colors */
+  --rainbow1: #ae2012;
+  --rainbow2: #bb3e04;
+  --rainbow3: #ca6702;
+  --rainbow4: #ee9b00;
+  --rainbow5: #e9d9a6;
+  --rainbow6: #94d2bd;
+  --rainbow7: #0a9396;
+  --rainbow8: #025f72;
+  --onRainbow: #fff;
+
+  /* Spacing */
+  --area-padding: 64px;
+  --area-padding-mobile: 32px;
+
+  /* Performance optimization: declare commonly used values */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease-in-out;
+}
+
+/* Font loading optimization - prevent invisible text */
+@font-face {
+  font-family: "Domine Fallback";
+  src: local("Georgia"), local("Times"), local("serif");
+  font-display: swap;
+  size-adjust: 95%;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Fallback";
+  src: local("-apple-system"), local("BlinkMacSystemFont"), local("Segoe UI"),
+    local("sans-serif");
+  font-display: swap;
+  size-adjust: 102%;
+}
+
+/* ==========================================================================
+   Base Elements
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--onBackground);
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Reduce layout thrashing */
+  contain: layout style;
+  /* Ensure consistent font metrics */
+  font-display: swap;
+  margin: 0;
+}
+
+/* Apply web font after it loads */
+.fonts-loaded body {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+a {
+  color: var(--onBackground);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "Domine", Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  /* Prevent layout shift */
+  font-display: swap;
+}
+
+h2 {
+  line-height: 4rem;
+}
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.no-top-padding {
+  padding-top: 0;
+}
+
+/*screen reader only*/
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links > a {
+  font-size: 1.2rem;
+}
+
+.github-button {
+  background-color: var(--github-button-color);
+  color: var(--onGithubButton);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header > h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  padding-bottom: 0;
+  margin: 0;
+  line-height: 1.1;
+  /* Prevent layout shift */
+  min-height: 1.1em;
+  /* Use system font until web font loads */
+  font-family: Georgia, serif;
+  /* Ensure consistent metrics */
+  size-adjust: 100%;
+}
+
+/* Apply web font after it loads */
+.fonts-loaded header > h1 {
+  font-family: "Domine", Georgia, serif;
+}
+
+/* ==========================================================================
+   Rainbow Section
+   ========================================================================== */
+
+.rainbow-area {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+.rainbow {
+  width: 100%;
+  height: 18px;
+}
+
+.rainbow1 {
+  background-color: var(--rainbow1);
+  width: 30%;
+}
+.rainbow2 {
+  background-color: var(--rainbow2);
+  width: 40%;
+}
+.rainbow3 {
+  background-color: var(--rainbow3);
+  width: 50%;
+}
+.rainbow4 {
+  background-color: var(--rainbow4);
+  width: 60%;
+}
+.rainbow5 {
+  background-color: var(--rainbow5);
+  width: 70%;
+}
+.rainbow6 {
+  background-color: var(--rainbow6);
+  width: 80%;
+}
+.rainbow7 {
+  background-color: var(--rainbow7);
+  width: 90%;
+}
+.rainbow8 {
+  background-color: var(--rainbow8);
+}
+
+/* ==========================================================================
+   Middle Content
+   ========================================================================== */
+
+.middle-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--area-padding);
+  gap: 32px;
+}
+
+.middle-content > p {
+  font-size: 1.5rem;
+}
+
+.middle-content h2 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Table Styles
+   ========================================================================== */
+
+.levels-table-section {
+  margin-top: 48px;
+  overflow-x: auto;
+  position: relative;
+}
+
+.levels-table-section h3 {
+  font-family: "Domine", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  text-align: center;
+  color: var(--onBackground);
+}
+
+.levels-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: var(--background);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.levels-table caption {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.levels-table thead {
+  background: linear-gradient(135deg, var(--rainbow8), var(--rainbow7));
+}
+
+.levels-table th,
+.levels-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--tableBorder);
+}
+
+.levels-table th {
+  font-weight: 600;
+  color: var(--onRainbow);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.levels-table tbody tr {
+  transition: background-color 0.2s ease;
+  will-change: background-color;
+}
+
+.levels-table tbody tr:hover {
+  background-color: var(--tableHover);
+}
+
+/* Remove will-change after transition to save memory */
+.levels-table tbody tr:not(:hover) {
+  will-change: auto;
+}
+
+.levels-table tbody tr:nth-child(even) {
+  background-color: var(--tableRowEven);
+}
+
+.levels-table tbody th {
+  font-weight: 700;
+  color: var(--rainbow7);
+  background-color: var(--tableBody);
+  font-size: 1.1rem;
+}
+
+.levels-table tbody td {
+  color: var(--onBackground);
+  line-height: 1.5;
+}
+
+/* Sticky first column */
+.levels-table th:first-child,
+.levels-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  background-color: var(--background);
+}
+
+.levels-table thead th:first-child {
+  background: linear-gradient(
+    135deg,
+    var(--rainbow8),
+    var(--rainbow7)
+  ) !important;
+  z-index: 11;
+}
+
+.levels-table tbody th:first-child {
+  background-color: var(--tableBody);
+  color: var(--onTableHeader);
+  z-index: 10;
+}
+
+.levels-table tbody tr:nth-child(even) td:first-child {
+  background-color: var(--background) !important;
+}
+
+.levels-table tbody tr:hover td:first-child {
+  background-color: var(--background) !important;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > a {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  main,
+  .area-padding {
+    padding: var(--area-padding);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+
+  header > h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    line-height: 1.1;
+    min-height: 1.1em;
+  }
+
+  main,
+  .area-padding {
+    padding: var(--area-padding-mobile);
+  }
+
+  .middle-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle-content h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .middle-content > p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .levels-table-section h3 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .levels-table th,
+  .levels-table td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+
+  .levels-table {
+    font-size: 0.85rem;
+  }
+
+  .levels-table {
+    display: table;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .levels-table th,
+  .levels-table td {
+    padding: 10px 12px;
+    min-width: 120px;
+  }
+
+  .levels-table th:first-child,
+  .levels-table td:first-child {
+    min-width: 80px;
+    position: sticky;
+    left: 0;
+    z-index: 10;
+  }
+
+  .levels-table thead th:first-child {
+    background: linear-gradient(135deg, var(--rainbow8), var(--rainbow7));
+    z-index: 11;
+  }
+
+  .levels-table tbody th:first-child {
+    background-color: #eff8f5; /*yeah I know leave it alone */
+    z-index: 10;
+  }
+  footer p {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --onBackground: #fff;
+    --background: #000;
+    --area-padding: 64px;
+    --area-padding-mobile: 32px;
+
+    --github-button-color: #94d2bd;
+    --onGithubButton: #000;
+
+    --tableBody: #edd1cd;
+    --tableHeader: invert(#0d7478);
+    --onTableHeader: #000;
+    --tableBorder: rgba(148, 210, 189, 0.2);
+    --tableHover: invert(rgba(148, 210, 189, 0.1));
+    --tableRowEven: invert(rgba(148, 210, 189, 0.05));
+
+    --rainbow1: #00d3e3;
+    --rainbow2: #00bce6;
+    --rainbow3: #0794df;
+    --rainbow4: #0061cf;
+    --rainbow5: #142556;
+    --rainbow6: #652c41;
+    --rainbow7: #ca6966;
+    --rainbow8: #e19e8c;
+    --onRainbow: #000;
+  }
+
+  img {
+    filter: invert(1); /*yeah I know, fine for now */
+  }
+}
+
+/* ==========================================================================
+   Cookie Banner
+   ========================================================================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--background);
+  border-top: 2px solid var(--rainbow6);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  /* Force hardware acceleration */
+  transform: translate3d(0, 100%, 0);
+}
+
+.cookie-banner.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.cookie-content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cookie-text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--onBackground);
+  opacity: 0.9;
+}
+
+.cookie-text a {
+  color: var(--rainbow7);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.cookie-text a:hover {
+  color: var(--rainbow8);
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-primary, "Plus Jakarta Sans", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* Optimize transitions for compositing */
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  /* Prepare for hardware acceleration */
+  will-change: transform;
+}
+
+.cookie-btn-primary {
+  background: linear-gradient(135deg, var(--rainbow7), var(--rainbow8));
+  color: var(--onRainbow);
+}
+
+.cookie-btn-primary:hover {
+  /* Use translate3d for hardware acceleration */
+  transform: translate3d(0, -1px, 0);
+  box-shadow: 0 4px 12px rgba(10, 147, 150, 0.3);
+}
+
+/* Clean up will-change when not hovering */
+.cookie-btn:not(:hover):not(:focus) {
+  will-change: auto;
+}
+
+.cookie-btn-secondary {
+  background: transparent;
+  color: var(--onBackground);
+  border: 1px solid var(--tableBorder);
+}
+
+.cookie-btn-secondary:hover {
+  background: var(--tableHover);
+  border-color: var(--rainbow6);
+}
+
+/* Responsive Cookie Banner */
+@media (max-width: 768px) {
+  .cookie-banner {
+    padding: 16px;
+  }
+
+  .cookie-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .cookie-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .cookie-text p {
+    font-size: 0.9rem;
+  }
+
+  .cookie-actions {
+    justify-content: center;
+  }
+
+  .cookie-btn {
+    flex: 1;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-banner {
+    padding: 12px;
+  }
+
+  .cookie-text h3 {
+    font-size: 1rem;
+  }
+
+  .cookie-text p {
+    font-size: 0.85rem;
+  }
+
+  .cookie-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cookie-btn {
+    max-width: none;
+    width: 100%;
+  }
+}

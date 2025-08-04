@@ -1,0 +1,22 @@
+{
+  "name": "Open Tech Leveling",
+  "short_name": "Tech Leveling",
+  "description": "Empowering engineers through transparent leveling structure",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a9396",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "cache_policy": {
+    "static_assets": "cache-first",
+    "html_content": "network-first",
+    "max_age": 31536000
+  }
+}
