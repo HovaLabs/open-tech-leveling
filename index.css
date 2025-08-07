@@ -251,6 +251,7 @@ header > h1 {
   justify-content: space-between;
   align-items: center;
   padding-top: var(--area-padding);
+  padding-bottom: var(--area-padding);
   gap: 32px;
 }
 
@@ -451,7 +452,6 @@ footer > a {
 
   .middle-content > p {
     font-size: 1.2rem;
-    line-height: 2rem;
   }
 
   .levels-table-section h3 {
@@ -500,6 +500,7 @@ footer > a {
     background-color: #eff8f5; /*yeah I know leave it alone */
     z-index: 10;
   }
+
   footer p {
     font-size: 1rem;
     margin-top: 0;
