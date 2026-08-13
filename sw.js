@@ -1,9 +1,9 @@
 // Service Worker for Open Tech Leveling
 // Implements efficient caching strategies
 
-const CACHE_NAME = "open-tech-leveling-v1.1.0";
-const STATIC_CACHE_NAME = "static-v1.1.0";
-const DYNAMIC_CACHE_NAME = "dynamic-v1.1.0";
+const CACHE_NAME = "open-tech-leveling-v1.2.0";
+const STATIC_CACHE_NAME = "static-v1.2.0";
+const DYNAMIC_CACHE_NAME = "dynamic-v1.2.0";
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
@@ -51,7 +51,6 @@ self.addEventListener("activate", (event) => {
           cacheNames
             .filter((cacheName) => {
               return (
-                cacheName.startsWith("open-tech-leveling-") &&
                 cacheName !== CACHE_NAME &&
                 cacheName !== STATIC_CACHE_NAME &&
                 cacheName !== DYNAMIC_CACHE_NAME
