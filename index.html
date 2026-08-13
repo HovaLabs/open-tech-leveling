@@ -67,14 +67,8 @@
       />
     </noscript>
 
-    <!-- CSS - Preload critical styles with versioning -->
-    <link
-      rel="preload"
-      href="index.css?v=1.1.0"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="index.css?v=1.1.0" /></noscript>
+    <!-- CSS - Render-blocking so it applies before first paint (prevents FOUC) -->
+    <link rel="stylesheet" href="index.css?v=1.1.0" />
 
     <!-- Preload critical images with cache hints -->
     <link
