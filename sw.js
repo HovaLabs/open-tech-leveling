@@ -1,15 +1,15 @@
 // Service Worker for Open Tech Leveling
 // Implements efficient caching strategies
 
-const CACHE_NAME = "open-tech-leveling-v1.2.0";
-const STATIC_CACHE_NAME = "static-v1.2.0";
-const DYNAMIC_CACHE_NAME = "dynamic-v1.2.0";
+const CACHE_NAME = "open-tech-leveling-v1.3.0";
+const STATIC_CACHE_NAME = "static-v1.3.0";
+const DYNAMIC_CACHE_NAME = "dynamic-v1.3.0";
 
 // Assets to cache immediately
 const STATIC_ASSETS = [
   "/",
   "/index.html",
-  "/index.css?v=1.1.0",
+  "/index.css?v=1.2.0",
   "/cookie-banner.js?v=1.1.0",
   "/opentechleveling.svg?v=1.1.0",
   "/mobile.svg?v=1.1.0",

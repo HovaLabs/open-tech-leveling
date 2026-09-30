@@ -392,6 +392,51 @@ header > h1 {
 }
 
 /* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq {
+  padding-top: var(--area-padding);
+}
+
+.faq h2 {
+  font-family: "Domine", serif;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0 0 48px;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 64px;
+}
+
+.faq-item {
+  border-top: 4px solid var(--rainbow7);
+  padding-top: 20px;
+}
+
+.faq-item h3 {
+  font-family: "Domine", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 0 0 12px;
+}
+
+.faq-item p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-item a {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
@@ -461,6 +506,24 @@ footer > a {
 
   .levels-table-section h3 {
     margin-bottom: 24px;
+  }
+
+  .faq h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .faq-list {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .faq-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .faq-item p {
+    font-size: 1rem;
   }
 
   .levels-table th,

@@ -1,0 +1,97 @@
+# Open Tech Leveling
+
+> Open Tech Leveling is a free, open-source (MIT) career leveling framework for software engineers, created by Hova Labs. It defines eight levels, from L1 Junior Engineer to L8 Fellow, and describes each one across six dimensions: Engineering Excellence, Software Design + Architecture, Impact Scope, Level of Ambiguity, Ownership, and Team Building.
+
+The canonical version lives at https://www.opentechleveling.com/. Each level can be linked directly with its anchor, for example https://www.opentechleveling.com/#L4 for Staff Engineer. The framework originates from Hova Labs' work with startups, enterprise, and everything in between, and aims to explain engineering levels in simple terms with no gatekeeping or fluffy jargon.
+
+Levels at a glance: L1 Junior Engineer, L2 Software Engineer, L3 Senior Engineer, L4 Staff Engineer, L5 Senior Staff Engineer, L6 Principal Engineer, L7 Distinguished Engineer, L8 Fellow.
+
+**L1 - Junior Engineer** (https://www.opentechleveling.com/#L1)
+
+- Engineering Excellence: Basic coding skills, learning best practices, follows coding standards with guidance
+- Software Design + Architecture: Works on well-defined components, implements existing patterns
+- Impact Scope: Individual tasks, small features
+- Level of Ambiguity: Clear requirements, well-defined problems
+- Ownership: Executes ticket-level work with guidance. Plans within sprint goals and builds context on how their work fits in.
+- Team Building: Learns from team, asks questions, participates in team activities
+
+**L2 - Software Engineer** (https://www.opentechleveling.com/#L2)
+
+- Engineering Excellence: Proficient in primary tech stack, writes clean, testable code independently
+- Software Design + Architecture: Designs simple systems, understands common patterns and anti-patterns
+- Impact Scope: Full features, multiple related tasks
+- Level of Ambiguity: Some ambiguity, can break down medium-sized problems
+- Ownership: Independently owns and delivers features. Plans across sprints and contributes to scoping and estimations.
+- Team Building: Collaborates effectively, provides constructive code reviews
+
+**L3 - Senior Engineer** (https://www.opentechleveling.com/#L3)
+
+- Engineering Excellence: Expert in multiple technologies, champions best practices, optimizes for performance
+- Software Design + Architecture: Designs complex systems, makes architectural decisions for team-level projects
+- Impact Scope: Team-level impact, cross-functional collaboration
+- Level of Ambiguity: Comfortable with ambiguous requirements, defines technical approach
+- Ownership: Owns major systems or components. Plans across quarters, aligning team execution with roadmap goals.
+- Team Building: Mentors junior engineers, leads technical discussions
+
+**L4 - Staff Engineer** (https://www.opentechleveling.com/#L4)
+
+- Engineering Excellence: Deep expertise, introduces new technologies, establishes engineering standards
+- Software Design + Architecture: Architects multi-team systems, ensures scalability and maintainability
+- Impact Scope: Multi-team initiatives, cross-functional impact
+- Level of Ambiguity: Thrives in ambiguous environments, defines problems and solutions
+- Ownership: Leads initiatives across multiple teams. Aligns technical strategy with product direction across quarters.
+- Team Building: Develops team technical capabilities, influences engineering culture
+
+**L5 - Senior Staff Engineer** (https://www.opentechleveling.com/#L5)
+
+- Engineering Excellence: Industry-level expertise, drives technical vision, evaluates emerging technologies
+- Software Design + Architecture: Defines architecture for major platform initiatives, ensures long-term scalability
+- Impact Scope: Department-level impact, influences product strategy
+- Level of Ambiguity: Navigates high ambiguity, creates clarity from complex business needs
+- Ownership: Owns platform-critical systems. Plans 6–12 months ahead and aligns initiatives across engineering and product.
+- Team Building: Builds and develops senior engineers, shapes technical organization
+
+**L6 - Principal Engineer** (https://www.opentechleveling.com/#L6)
+
+- Engineering Excellence: Recognized expert, drives company-wide technical standards and innovation
+- Software Design + Architecture: Defines company-wide architectural patterns, leads major technical initiatives
+- Impact Scope: Organization-wide impact, influences business direction
+- Level of Ambiguity: Operates in high uncertainty, defines long-term technical strategy
+- Ownership: Owns org-wide architecture and technical direction. Leads multi-year roadmaps that support company strategy.
+- Team Building: Develops technical leaders, builds engineering excellence across organization
+
+**L7 - Distinguished Engineer** (https://www.opentechleveling.com/#L7)
+
+- Engineering Excellence: Industry thought leader, pioneers new approaches, speaks at major conferences
+- Software Design + Architecture: Invents new architectural paradigms, influences industry standards
+- Impact Scope: Industry impact, shapes technology landscape
+- Level of Ambiguity: Creates new possibilities from uncertainty, defines future technology direction
+- Ownership: Owns company-defining innovations. Evangelizes long-range (3–5+ year) strategies with business and technical execs.
+- Team Building: Attracts top talent, builds world-class engineering teams
+
+**L8 - Fellow** (https://www.opentechleveling.com/#L8)
+
+- Engineering Excellence: Legendary expertise, fundamental contributions to computer science
+- Software Design + Architecture: Creates foundational technologies, defines new computing paradigms
+- Impact Scope: Global impact, shapes the future of technology
+- Level of Ambiguity: Operates in pure ambiguity, creates entirely new fields of study
+- Ownership: Owns global-scale innovations. Defines and steers decades-long technical vision aligned with societal evolution.
+- Team Building: Builds legendary teams, creates lasting technical legacies
+
+**What is the difference between a Senior Engineer and a Staff Engineer?** The main difference is scope. A Senior Engineer (L3) has team-level impact: they design complex systems, make architectural decisions for team-level projects, and mentor junior engineers. A Staff Engineer (L4) works across multiple teams: they architect multi-team systems, lead initiatives across teams, define problems as well as solutions, and influence engineering culture.
+
+**What is the difference between a Staff Engineer and a Principal Engineer?** A Staff Engineer (L4) leads initiatives across multiple teams and plans across quarters. A Principal Engineer (L6) owns organization-wide architecture and technical direction, leads multi-year roadmaps that support company strategy, and develops technical leaders. The Senior Staff Engineer level (L5) sits between them, with department-level impact and a 6–12 month planning horizon.
+
+**How do I get promoted to the next engineering level?** Compare your current work with the next level's description in each of the six dimensions. The gaps show where to grow, whether that means taking on more ambiguous problems, owning larger systems, planning further ahead, or mentoring others. Managers can use the same descriptions to set clear, shared expectations for promotion.
+
+**Can my company use Open Tech Leveling?** Yes. It is free and released under the MIT License, so any company or team can use, adapt, or extend it. Contributions are welcome on GitHub.
+
+## Links
+
+- [Open Tech Leveling](https://www.opentechleveling.com/): The full leveling table and FAQ
+- [GitHub repository](https://github.com/HovaLabs/open-tech-leveling): Source, MIT license, and contributions
+- [Open Tech Leveling: An Engineer's Guide to Leveling Engineers](https://kaitlynhova.medium.com/open-tech-leveling-an-engineers-guide-to-leveling-engineers-d3fc29ba0fa5): Article introducing the framework
+
+## Optional
+
+- [Hova Labs](https://hovalabs.com/): The team behind Open Tech Leveling
