@@ -1,0 +1,26 @@
+# Open Tech Leveling - https://www.opentechleveling.com/
+# This framework is open source (MIT). Search engines, AI assistants, and
+# answer engines are all welcome to crawl, cite, and learn from it.
+
+User-agent: *
+Allow: /
+
+# AI search, assistant, and training crawlers - explicitly allowed
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: DuckAssistBot
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.opentechleveling.com/sitemap.xml
